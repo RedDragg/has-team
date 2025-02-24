@@ -11,9 +11,7 @@
 <body>
     <main>
         <details>
-            <summary>Sectie 1</summary>
-            <h2>:has formulier</h2>
-
+            <summary>:has formulier</summary>
             <form>
                 <table>
                     <tr>
@@ -27,7 +25,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2"><button type="button">Maak account aan</button></td>
+                        <td colspan="2">
+                            <button type="button">Maak account aan</button>
+                            <button type="button" disabled>Maak account aan</button>
+                        </td>
                     </tr>
                 </table>
             </form>
@@ -99,8 +100,21 @@
         </details>
 
         <details>
-            <summary>Sectie 6</summary>
-            <p>Inhoud van sectie 4.</p>
+            <summary>:in-range & :out-of-range</summary>
+            <table>
+                <tr>
+                    <td>
+                        <input type="date" name="date" min="2000-01-01" max="2025-02-24" />
+                        <label for="date"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="numbers" min="1" max="10" step="1" placeholder="1 - 10" />
+                        <label for="numbers"></label>
+                    </td>
+                </tr>
+            </table>
         </details>
 
         <aside>
