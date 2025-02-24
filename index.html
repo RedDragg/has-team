@@ -10,10 +10,8 @@
 
 <body>
     <main>
-        <details name="reqs">
-            <summary>Sectie 1</summary>
-            <h2>:has formulier</h2>
-
+        <details>
+            <summary>:has formulier</summary>
             <form>
                 <table>
                     <tr>
@@ -27,7 +25,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2"><button type="button">Maak account aan</button></td>
+                        <td colspan="2">
+                            <button type="button">Maak account aan</button>
+                            <button type="button" disabled>Maak account aan</button>
+                        </td>
                     </tr>
                 </table>
             </form>
@@ -61,12 +62,16 @@
             <p>Ik ben een groene font </p>
             <p>Ik word niet geselecteerd</p>
             <div>I am a div.</div>
-            <a href="https://css-tricks.com/almanac/pseudo-selectors/n/not/">css-tricks</a>
-            <a href="https://css-tricks.com/almanac/pseudo-selectors/n/not/">css-tricks</a>
-            <a href="https://www.w3schools.com/cssref/sel_not.php">w3schools</a>
-            <button>button A</button>
-            <button>button B</button>
-            <button disabled>disabled</button>
+            <div>            
+                <a href="https://css-tricks.com/almanac/pseudo-selectors/n/not/">css-tricks</a>
+                <a href="https://css-tricks.com/almanac/pseudo-selectors/n/not/">css-tricks</a>
+                <a href="https://www.w3schools.com/cssref/sel_not.php">w3schools</a>
+            </div>
+            <div>
+                <button>button A</button>
+                <button>button B</button>
+                <button disabled>disabled</button>
+            </div>
         </details>
 
         <details name="reqs">
@@ -106,12 +111,39 @@
 
         <details name="reqs">
             <summary>Sectie 5</summary>
-            <p>Inhoud van sectie 4.</p>
+            <p>Dit is een h1</p>
+            <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ul>
+
+            <p>de ol krijgt de kleur groen</p>
+            <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ol>
+
+            <p>Dit is een rode font</p>
         </details>
 
-        <details name="reqs">
-            <summary>Sectie 6</summary>
-            <p>Inhoud van sectie 4.</p>
+        <details>
+            <summary>:in-range & :out-of-range</summary>
+            <table>
+                <tr>
+                    <td>
+                        <input type="date" name="date" min="2000-01-01" max="2025-02-24" />
+                        <label for="date"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="numbers" min="1" max="10" step="1" placeholder="1 - 10" />
+                        <label for="numbers"></label>
+                    </td>
+                </tr>
+            </table>
         </details>
 
         <aside>
