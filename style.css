@@ -6,11 +6,35 @@
     --color-font-white: #FAF9F6;
 
     --font-size: clamp(16px, 1vw, 25px);
+
+    --color-pink: pink;
+    --color-red: rgb(255, 0, 0);
+    --color-purple: rgb(155, 5, 255);
+    --color-blue:  rgb(1, 48, 255);
+    --color-cyan: cyan;
+    --color-yellow: rgb(255, 242, 0);
+    --color-orange: rgb(251, 144, 5);
+    --color-green: rgb(62, 252, 4);
+
+    
+
+
+
+
   }
 
   @supports color(display-p3 0 0 0) {
     :root {
       --fun-color: color(display-p3 0 0 0);
+
+      --color-pink: oklch(66.49% 0.2828 1.41);
+      --color-red: oklch(66.49% 0.2754 27.88);
+      --color-purple: oklch(100% 0.125 285);
+      --color-blue: oklch(82.28% 0.1891 203.65);
+      --color-cyan: oklch(75.77% 0.1398 246);
+      --color-yellow: oklch(82.28% 0.1743 74.47);
+      --color-orange: oklch(66.49% 0.1891 50.12);
+      --color-green: oklch(82.28% 0.3075 142.24);
     }
   }
 
@@ -69,6 +93,10 @@ summary {
     outline: none;
 }
 
+/* ************************************************************************* */
+/* section 3 */ /* section 3 */ /* section 3 */ /* section 3 */ /* section 3 */
+/* ************************************************************************* */
+
 details:nth-of-type(3){
     /* selecteer niet de laatste p in de details */
     p:not(:last-of-type) {
@@ -97,7 +125,7 @@ details:nth-of-type(3){
 /* section 2 */ /* section 2 */ /* section 2 */ /* section 2 */ /* section 2 */
 /* ************************************************************************* */
 
-details:nth-of-type(2){
+details:nth-of-type(2) {
 
     ul {
         list-style: none;
@@ -137,10 +165,12 @@ details:nth-of-type(2){
       li:hover + li {
         --li-pb: 0.15em;
         --li-delay: 40ms;
-      
+        
         scale: calc(var(--li-scale) - var(--li-scale-adj));
         opacity: 0.85;
       }
+
+
       
       /* When a list item is being hovered,
       select list items not hovered, or before/after hover */
@@ -165,22 +195,12 @@ details:nth-of-type(2){
        
 }
 
-  
-  /* :has() support alert */
-  details:nth-of-type(2) aside {
-    max-width: 30ch;
-    padding: 1rem;
-    background-color: palegoldenrod;
-    border-radius: 0.5rem;
-    margin-block-end: 1rem;
-    line-height: 1.3;
-  
-    code {
-      font-size: 1.25em;
-      color: firebrick;
-    }
-  }
 
+
+
+  /* ************************************************************************* */
+/* section 1 */ /* section 1 */ /* section 1 */ /* section 1 */ /* section 1 */
+/* ************************************************************************* */
 /* :has formulier */
 details:nth-of-type(1){
     form {
@@ -216,3 +236,105 @@ details:nth-of-type(1){
         }
     }
 }
+
+details:nth-of-type(4) {
+
+    div {
+        /* Range of checked items */
+        /* Yes, this could just be label:has(:checked) but we're demonstrating
+        selecting a range :) */
+        label:has(:checked):has(~ label :checked),
+        /* so here we check if the div has a label that is checked has a checked label before it */
+        label:has(:checked):not(label:has(+ label :checked)) {
+            /* and after */
+          border-inline-color: black;
+        }
+
+        label:nth-of-type(1):has(:checked) {
+            background-color: var(--color-pink);
+        }
+        label:nth-of-type(2):has(:checked) {
+            background-color: var(--color-red);
+        }
+        label:nth-of-type(3):has(:checked) {
+            background-color: var(--color-purple);
+        }
+        label:nth-of-type(4):has(:checked) {
+            background-color: var(--color-blue);
+        }
+        label:nth-of-type(5):has(:checked) {
+            background-color: var(--color-cyan);
+        }
+        label:nth-of-type(6):has(:checked) {
+            background-color: var(--color-yellow);
+        }
+        label:nth-of-type(7):has(:checked) {
+            background-color: var(--color-orange);
+        }
+        label:nth-of-type(8):has(:checked) {
+            background-color: var(--color-green);
+        }
+
+        label:has(:checked):not(label:has(+ label :checked)) {
+            /* als de label is gechecked en de label daarna niet gecheked is geef hem dan een border radius van .75em */
+            --radius-bl: 0.75em;
+            --radius-br: 0.75em;
+            border-block-end-color: black;
+            box-shadow: 0 4px 3px -2px hsl(0 0% 0% / 35%);
+        }
+        
+        label:has(:checked):not(label:has(:checked) + label) {
+            /* and after */
+            border-block-start-color: black;
+            --radius-tl: 0.75em;
+            --radius-tr: 0.75em;
+        }
+
+
+    }
+
+
+
+    
+
+    div label {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        padding: 0.5em;
+        border: 1px solid transparent;
+        border-radius: var(--radius-tl, 0) var(--radius-tr, 0) var(--radius-br, 0)
+          var(--radius-bl, 0);
+      }
+
+    fieldset {
+        padding: 10px;
+        margin: 10px 0 10px 0;
+    }
+
+    /* Add a rule to set the --checked-color custom property based on the input value */
+    input:checked {
+        --checked-color: attr(value);
+    }
+    
+}
+
+
+
+
+  
+  /* :has() support alert */
+  aside {
+    max-width: 30ch;
+    padding: 1rem;
+    background-color: palegoldenrod;
+    border-radius: 0.5rem;
+    margin-block-end: 1rem;
+    line-height: 1.3;
+  
+    code {
+      font-size: 1.25em;
+      color: firebrick;
+    }
+  }
+
