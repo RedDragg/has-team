@@ -67,7 +67,6 @@ summary {
     font-weight: bold;
     cursor: pointer;
     outline: none;
-<<<<<<< HEAD
 }
 
 details:nth-of-type(3){
@@ -90,9 +89,6 @@ details:nth-of-type(3){
     button:not([disabled]){
         font-size: 25px;
     }
-}
-=======
-    padding-bottom: .5em;
 }
 
 /* ************************************************************************* */
