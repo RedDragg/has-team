@@ -67,6 +67,31 @@ summary {
     font-weight: bold;
     cursor: pointer;
     outline: none;
+<<<<<<< HEAD
+}
+
+details:nth-of-type(3){
+    /* selecteer niet de laatste p in de details */
+    p:not(:last-of-type) {
+    color: green;
+    }
+
+    /* selecteer alles behalve de p */
+    :not(p) {
+    text-decoration: underline;
+    }
+
+    /* selecteer alle andere links die niet naar deze https connect */
+    a:not([href*="https://css-tricks.com/almanac/pseudo-selectors/n/not/"]){
+        color: red;
+    }
+
+    /* selecteer alle buttons die niet disabled zijn */
+    button:not([disabled]){
+        font-size: 25px;
+    }
+}
+=======
     padding-bottom: .5em;
 }
 
@@ -142,18 +167,20 @@ details:nth-of-type(2){
        
 }
 
-
-      /* :has() support alert */
-    aside {
-        max-width: 30ch;
-        padding: 1rem;
-        background-color: palegoldenrod;
-        border-radius: 0.5rem;
-        margin-block-end: 1rem;
-        line-height: 1.3;
-    
-        code {
-        font-size: 1.25em;
-        color: firebrick;
-        }
+  
+  /* :has() support alert */
+  details:nth-of-type(2) aside {
+    max-width: 30ch;
+    padding: 1rem;
+    background-color: palegoldenrod;
+    border-radius: 0.5rem;
+    margin-block-end: 1rem;
+    line-height: 1.3;
+  
+    code {
+      font-size: 1.25em;
+      color: firebrick;
     }
+  }
+  
+ 
