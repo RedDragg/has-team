@@ -240,31 +240,31 @@ details:nth-of-type(1) {
     }
 }
 
-        /* Min max details block */
-        details:nth-child(6) {
-            input {
-                height: 2rem;
-                border: 1px solid #444;
-                border-radius: 5px;
-            }
+/* Min max details block */
+details:nth-child(6) {
+    input {
+        height: 2rem;
+        border: 1px solid #444;
+        border-radius: 5px;
+    }
 
-            /* Als waarde uit range is (min & max) */
-            input:out-of-range {
-                background-color: rgb(255 0 0 / 25%);
-                border: 2px solid crimson;
-            }
+    /* Als waarde uit range is (min & max) */
+    input:out-of-range {
+        background-color: rgb(255 0 0 / 25%);
+        border: 2px solid crimson;
+    }
 
-            input:out-of-range+label::after {
-                content: "Waarde is uit range";
-            }
+    input:out-of-range+label::after {
+        content: "Waarde is uit range";
+    }
 
-            /* Als waarde in range is (min & max) */
-            input:user-valid:in-range {
-                background-color: rgb(0 255 0 / 25%);
-                border: 2px solid forestgreen;
-            }
+    /* Als waarde in range is (min & max) */
+    input:user-valid:in-range {
+        background-color: rgb(0 255 0 / 25%);
+        border: 2px solid forestgreen;
+    }
 
-            input:user-valid:in-range+label::after {
-                content: "Waarde is in range";
-            }
-        }
+    input:user-valid:in-range+label::after {
+        content: "Waarde is in range";
+    }
+}
