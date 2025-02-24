@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uitklapbare Secties</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <details>
             <summary>Sectie 1</summary>
-            <p>Inhoud van sectie 1.</p>
+            <h2>:has formulier</h2>
+
+            <form>
+                <table>
+                    <tr>
+                        <td><input type="text" name="Voornaam" placeholder="Voornaam" value="Tymo" /></td>
+                        <td><input type="text" name="Achternaam" placeholder="Achternaam" value="Smids" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" name="Email" placeholder="Email*" required value="test@tester.nl" /></td>
+                        <td><input type="password" name="Wachtwoord" placeholder="Wachtwoord*" required value="test" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="button">Maak account aan</button></td>
+                    </tr>
+                </table>
+            </form>
         </details>
-        
+
         <details>
             <summary>Animating with :Has</summary>
             <ul>
@@ -25,7 +43,7 @@
 
             
         </details>
-        
+
         <details>
             <summary>Demo of :not</summary>
             <p>Ik ben een groene font </p>
@@ -38,6 +56,7 @@
             <button>button B</button>
             <button disabled>disabled</button>
         </details>
+<<<<<<< Updated upstream
         
         <details>
             <summary>Sectie 4</summary>
@@ -49,11 +68,14 @@
             <summary>Sectie 5</summary>
             <p>Inhoud van sectie 4.</p>
         </details>
+=======
+>>>>>>> Stashed changes
 
         <details>
             <summary>Sectie 6</summary>
             <p>Inhoud van sectie 4.</p>
         </details>
+<<<<<<< Updated upstream
         
         <aside>
             <p>🚨 Sorry, your browser doesn't support <code>:has()</code> - view this demo in
@@ -63,5 +85,15 @@
 
     </main>
 
+=======
+
+        <details>
+            <summary>Sectie 4</summary>
+            <p>Inhoud van sectie 4.</p>
+        </details>
+
+    </div>
+>>>>>>> Stashed changes
 </body>
+
 </html>

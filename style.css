@@ -67,6 +67,7 @@ summary {
     font-weight: bold;
     cursor: pointer;
     outline: none;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 }
 
@@ -184,3 +185,42 @@ details:nth-of-type(2){
   }
   
  
+=======
+}
+
+/* :has formulier */
+details:nth-of-type(1){
+    form {
+        overflow-x: auto;
+
+        input {
+            border: 1px solid #444 !important;
+            border-radius: 5px;
+            height: 2rem;
+            border: 1px;
+
+            /* Input valid & invalid styling */
+            &:invalid { border-right: 3px solid crimson !important; }
+            &:valid { border-right: 3px solid forestgreen !important; }
+        }
+
+        button {
+            background: forestgreen;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Als het formulier een invalid input heeft */
+        &:has(input:invalid) {
+            button {
+                background-color: gray;
+                color: #000;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+>>>>>>> Stashed changes
