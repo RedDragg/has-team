@@ -8,21 +8,21 @@
     --font-size: clamp(16px, 1vw, 25px);
 
 
-    --color-red: rgb(255, 0, 0);
-        --color-red-pink: rgb(255, 92, 97);
-    --color-pink: rgb(255,192,203);
-        --color-pink-purple: rgb(204, 97, 216);
-    --color-purple: rgb(155, 5, 255);
-        --color-purple-blue: rgb(80, 26, 255);
-    --color-blue:  rgb(1, 48, 255);
-        --color-blue-cyan: rgb(0, 154, 255);
-    --color-cyan: rgb(0, 255, 255);
-        --color-cyan-green: rgb(32, 253, 127);
-    --color-green: rgb(62, 252, 4);
-        --color-green-yellow: rgb(159, 247, 2);
-    --color-yellow: rgb(255, 242, 0);
-        --color-yellow-orange: rgb(251, 191, 3);
-    --color-orange: rgb(251, 144, 5);
+    --color-red: hsl(0, 100%, 50%);
+    --color-red-pink: hsl(0, 100%, 68%);
+    --color-pink: hsl(350, 100%, 88%);
+    --color-pink-purple: hsl(300, 100%, 61%);
+    --color-purple: hsl(270, 100%, 51%);
+    --color-purple-blue: hsl(240, 100%, 55%);
+    --color-blue: hsl(220, 100%, 50%);
+    --color-blue-cyan: hsl(200, 100%, 50%);
+    --color-cyan: hsl(180, 100%, 50%);
+    --color-cyan-green: hsl(150, 100%, 56%);
+    --color-green: hsl(120, 100%, 50%);
+    --color-green-yellow: hsl(90, 100%, 49%);
+    --color-yellow: hsl(60, 100%, 50%);
+    --color-yellow-orange: hsl(45, 100%, 50%);
+    --color-orange: hsl(30, 100%, 50%);
 
     --gradient-red-pink: linear-gradient(180deg, var(--color-red) 0%, var(--color-red-pink) 100%);
 
