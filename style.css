@@ -72,6 +72,7 @@ summary {
 details:nth-of-type(3){
   display: flex;
   flex-direction: column;
+  gap: 1em;
     /* selecteer niet de laatste p in de details */
     p:not(:last-of-type) {
     color: green;
