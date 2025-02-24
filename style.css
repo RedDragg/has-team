@@ -7,19 +7,50 @@
 
     --font-size: clamp(16px, 1vw, 25px);
 
-    --color-pink: pink;
+
     --color-red: rgb(255, 0, 0);
+        --color-red-pink: rgb(255, 92, 97);
+    --color-pink: rgb(255,192,203);
+        --color-pink-purple: rgb(204, 97, 216);
     --color-purple: rgb(155, 5, 255);
+        --color-purple-blue: rgb(80, 26, 255);
     --color-blue:  rgb(1, 48, 255);
-    --color-cyan: cyan;
-    --color-yellow: rgb(255, 242, 0);
-    --color-orange: rgb(251, 144, 5);
+        --color-blue-cyan: rgb(0, 154, 255);
+    --color-cyan: rgb(0, 255, 255);
+        --color-cyan-green: rgb(32, 253, 127);
     --color-green: rgb(62, 252, 4);
+        --color-green-yellow: rgb(159, 247, 2);
+    --color-yellow: rgb(255, 242, 0);
+        --color-yellow-orange: rgb(251, 191, 3);
+    --color-orange: rgb(251, 144, 5);
 
-    
+    --gradient-red-pink: linear-gradient(180deg, var(--color-red) 0%, var(--color-red-pink) 100%);
 
+    --gradient-tb-red-pink: linear-gradient(180deg, var(--color-red-pink) 0%, var(--color-pink) 100%);
+    --gradient-c-pink: linear-gradient(180deg, var(--color-red-pink) 0%, var(--color-pink) 50%, var(--color-pink-purple) 100%);
+    --gradient-bt-pink-purple: linear-gradient(180deg, var(--color-pink) 0%, var(--color-pink-purple) 100%);
 
+    --gradient-tb-purple-pink: linear-gradient(180deg, var(--color-pink-purple) 0%, var(--color-purple) 100%);
+    --gradient-c-purple: linear-gradient(180deg, var(--color-pink-purple) 0%, var(--color-purple) 50%, var(--color-purple-blue) 100%);
+    --gradient-bt-purple-blue: linear-gradient(180deg, var(--color-purple) 0%, var(--color-purple-blue) 100%);
 
+    --gradient-tb-purple-blue: linear-gradient(180deg, var(--color-purple-blue) 0%, var(--color-blue) 100%);
+    --gradient-c-blue: linear-gradient(180deg, var(--color-purple-blue) 0%, var(--color-blue) 50%, var(--color-blue-cyan) 100%);
+    --gradient-bt-blue-cyan: linear-gradient(180deg, var(--color-blue) 0%, var(--color-blue-cyan) 100%);
+
+    --gradient-tb-blue-cyan: linear-gradient(180deg, var(--color-blue-cyan) 0%, var(--color-cyan) 100%);
+    --gradient-c-cyan: linear-gradient(180deg, var(--color-blue-cyan) 0%, var(--color-cyan) 50%, var(--color-cyan-green) 100%);
+    --gradient-bt-cyan-green: linear-gradient(180deg, var(--color-cyan) 0%, var(--color-cyan-green) 100%);
+
+    --gradient-tb-cyan-green: linear-gradient(180deg, var(--color-cyan-green) 0%, var(--color-green) 100%);
+    --gradient-c-green: linear-gradient(180deg, var(--color-cyan-green) 0%, var(--color-green) 50%, var(--color-green-yellow) 100%);
+    --gradient-bt-green-yellow: linear-gradient(180deg, var(--color-green) 0%, var(--color-green-yellow) 100%);
+
+    --gradient-tb-green-yellow: linear-gradient(180deg, var(--color-green-yellow) 0%, var(--color-yellow) 100%);
+    --gradient-c-yellow: linear-gradient(180deg, var(--color-green-yellow) 0%, var(--color-yellow) 50%, var(--color-yellow-orange) 100%);
+    --gradient-bt-yellow-orange: linear-gradient(180deg, var(--color-yellow) 0%, var(--color-yellow-orange) 100%);
+
+    --gradient-tb-yellow-orange: linear-gradient(180deg, var(--color-yellow-orange) 0%, var(--color-orange) 100%);
 
 }
 
@@ -324,30 +355,12 @@ details:nth-of-type(4) {
           border-inline-color: black;
         }
 
-        label:nth-of-type(1):has(:checked) {
-            background-color: var(--color-pink);
+        label {
+            height: 8em;
         }
-        label:nth-of-type(2):has(:checked) {
-            background-color: var(--color-red);
-        }
-        label:nth-of-type(3):has(:checked) {
-            background-color: var(--color-purple);
-        }
-        label:nth-of-type(4):has(:checked) {
-            background-color: var(--color-blue);
-        }
-        label:nth-of-type(5):has(:checked) {
-            background-color: var(--color-cyan);
-        }
-        label:nth-of-type(6):has(:checked) {
-            background-color: var(--color-yellow);
-        }
-        label:nth-of-type(7):has(:checked) {
-            background-color: var(--color-orange);
-        }
-        label:nth-of-type(8):has(:checked) {
-            background-color: var(--color-green);
-        }
+    
+
+        
 
         label:has(:checked):not(label:has(+ label :checked)) {
             /* als de label is gechecked en de label daarna niet gecheked is geef hem dan een border radius van .75em */
@@ -364,6 +377,124 @@ details:nth-of-type(4) {
             --radius-tr: 0.75em;
         }
 
+
+        /* ******************************************************************************* */
+        /* underneath check*//* underneath check*//* underneath check*//* underneath check */
+        /* ******************************************************************************* */
+
+        label:nth-of-type(1):has(:checked) + label:has(:checked) {
+            background-image: var(--gradient-tb-red-pink);
+        }
+
+        label:nth-of-type(2):has(:checked) + label:has(:checked) {
+            background-image: var(--gradient-tb-purple-pink);
+        }
+
+        label:nth-of-type(3):has(:checked) + label:has(:checked) {
+            background-image: var(--gradient-tb-purple-blue);
+        }
+
+        label:nth-of-type(4):has(:checked) + label:has(:checked) {
+            background-image: var(--gradient-tb-blue-cyan);
+        }
+
+        label:nth-of-type(5):has(:checked) + label:has(:checked) {
+            background-image: var(--gradient-tb-cyan-green);
+        }
+
+        label:nth-of-type(6):has(:checked) + label:has(:checked) {
+            background-image: var(--gradient-tb-green-yellow);
+        }
+
+        label:nth-of-type(7):has(:checked) + label:has(:checked) {
+            background-image: var(--gradient-tb-yellow-orange);
+        }
+
+        /* *************************************************************** */
+        /* on-top check*//* on-top check*//* on-top check*//* on-top check */
+        /* *************************************************************** */
+
+        label:nth-of-type(1):has(:checked):not(label:has(:checked) + label) {
+            background-image: var(--gradient-red-pink);
+        }
+        
+        label:nth-of-type(2):has(:checked):not(label:has(:checked) + label) {
+            background-image: var(--gradient-bt-pink-purple);
+        }
+        
+        label:nth-of-type(3):has(:checked):not(label:has(:checked) + label) {
+            background-image: var(--gradient-bt-purple-blue);
+        }
+        
+        label:nth-of-type(4):has(:checked):not(label:has(:checked) + label) {
+            background-image: var(--gradient-bt-blue-cyan);
+        }
+        
+        label:nth-of-type(5):has(:checked):not(label:has(:checked) + label) {
+            background-image: var(--gradient-bt-cyan-green);
+        }
+        
+        label:nth-of-type(6):has(:checked):not(label:has(:checked) + label) {
+            background-image: var(--gradient-bt-green-yellow);
+        }
+        
+        label:nth-of-type(7):has(:checked):not(label:has(:checked) + label) {
+            background-image: var(--gradient-bt-yellow-orange);
+        }
+
+        
+        label:nth-of-type(1):has(:checked) {
+            background-color: var(--color-red);
+        }
+        label:nth-of-type(2):has(:checked) {
+            background-color: var(--color-pink);
+        }
+        label:nth-of-type(3):has(:checked) {
+            background-color: var(--color-purple);
+        }
+        label:nth-of-type(4):has(:checked) {
+            background-color: var(--color-blue);
+        }
+        label:nth-of-type(5):has(:checked) {
+            background-color: var(--color-cyan);
+        }
+        label:nth-of-type(6):has(:checked) {
+            background-color: var(--color-green);
+        }
+        label:nth-of-type(7):has(:checked) {
+            background-color: var(--color-yellow);
+        }
+        label:nth-of-type(8):has(:checked) {
+            background-color: var(--color-orange);
+        }
+
+        /* ******************************************************************************* */
+        /* underneath check*//* underneath check*//* underneath check*//* underneath check */     
+        /* ******************************************************************************* */
+
+        label:nth-of-type(2):has(:checked):has(~ label :checked):has(+ label :checked) {
+          background-image: var(--gradient-c-pink);
+        }
+
+        label:nth-of-type(3):has(:checked):has(~ label :checked):has(+ label :checked) {
+          background-image: var(--gradient-c-purple);
+        }
+
+        label:nth-of-type(4):has(:checked):has(~ label :checked):has(+ label :checked) {
+          background-image: var(--gradient-c-blue);
+        }
+
+        label:nth-of-type(5):has(:checked):has(~ label :checked):has(+ label :checked) {
+          background-image: var(--gradient-c-cyan);
+        }
+
+        label:nth-of-type(6):has(:checked):has(~ label :checked):has(+ label :checked) {
+          background-image: var(--gradient-c-green);
+        }
+
+        label:nth-of-type(7):has(:checked):has(~ label :checked):has(+ label :checked) {
+          background-image: var(--gradient-c-yellow);
+        }
 
     }
 
