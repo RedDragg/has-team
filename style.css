@@ -70,6 +70,7 @@ summary {
     outline: none;
 }
 
+<<<<<<< Updated upstream
 details:nth-of-type(3){
   display: flex;
   flex-direction: column;
@@ -192,6 +193,10 @@ details:nth-of-type(2) aside {
 
 /* :has formulier */
 details:nth-of-type(1) {
+=======
+/* :has formulier */
+details:nth-of-type(1){
+>>>>>>> Stashed changes
     form {
         overflow-x: auto;
 
@@ -202,6 +207,7 @@ details:nth-of-type(1) {
             border: 1px;
 
             /* Input valid & invalid styling */
+<<<<<<< Updated upstream
             &:user-invalid {
                 border-right: 3px solid crimson !important;
             }
@@ -209,6 +215,10 @@ details:nth-of-type(1) {
             &:valid:required {
                 border-right: 3px solid forestgreen !important;
             }
+=======
+            &:invalid { border-right: 3px solid crimson !important; }
+            &:valid { border-right: 3px solid forestgreen !important; }
+>>>>>>> Stashed changes
         }
 
         button {
@@ -220,6 +230,7 @@ details:nth-of-type(1) {
             cursor: pointer;
         }
 
+<<<<<<< Updated upstream
         /* Hide disabled button */
         button:not(:disabled) {
             display: none;
@@ -237,10 +248,19 @@ details:nth-of-type(1) {
             /* Hide normale button */
             button:not(:disabled) {
                 display: none;
+=======
+        /* Als het formulier een invalid input heeft */
+        &:has(input:invalid) {
+            button {
+                background-color: gray;
+                color: #000;
+                cursor: not-allowed;
+>>>>>>> Stashed changes
             }
         }
     }
 }
+<<<<<<< Updated upstream
 
 /* Min max details block */
 details:nth-child(6) {
@@ -270,3 +290,5 @@ details:nth-child(6) {
         content: "Waarde is in range";
     }
 }
+=======
+>>>>>>> Stashed changes
