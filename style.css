@@ -4,6 +4,8 @@
     --li-pb: 0.25em;
     --fun-color: #ff00ff;
     --color-font-white: #FAF9F6;
+    --background-color: #282828;
+    --color-deats: rgb(255, 213, 128);
 
     --font-size: clamp(16px, 1vw, 25px);
 
@@ -88,8 +90,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
+    justify-content: center;
+    min-height: 100vh;
+
 }
 
 main {
@@ -117,6 +121,7 @@ details {
     padding: 10px;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-deats);
 }
 
 summary {
