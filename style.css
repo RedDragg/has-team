@@ -136,14 +136,16 @@ details:nth-of-type(5){
       list-style: none;
     }
 
-    :is(li) :where(h1, h2, h3, h4, a){
-      color: green;
-    }
-
     :is(li) :is(h1, h2, h3, h4){
       font-weight: bold;
       color: #000;
     }
+
+    :is(li) :where(h1, h2, h3, h4, a){
+      color: green;
+    }
+
+
 }
 
 
