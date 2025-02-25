@@ -54,22 +54,24 @@
 
     --gradient-tb-yellow-orange: linear-gradient(180deg, var(--color-yellow-orange) 0%, var(--color-orange) 100%);
 
-}
+    @supports color(display-p3 0 0 0) {
 
-@supports color(display-p3 0 0 0) {
-    :root {
-        --fun-color: color(display-p3 0 0 0);
-
-      --color-pink: oklch(66.49% 0.2828 1.41);
-      --color-red: oklch(66.49% 0.2754 27.88);
-      --color-purple: oklch(100% 0.125 285);
-      --color-blue: oklch(82.28% 0.1891 203.65);
-      --color-cyan: oklch(75.77% 0.1398 246);
-      --color-yellow: oklch(82.28% 0.1743 74.47);
-      --color-orange: oklch(66.49% 0.1891 50.12);
-      --color-green: oklch(82.28% 0.3075 142.24);
+            --fun-color: color(display-p3 0 0 0);
+    
+          --color-pink: oklch(66.49% 0.2828 1.41);
+          --color-red: oklch(66.49% 0.2754 27.88);
+          --color-purple: oklch(100% 0.125 285);
+          --color-blue: oklch(82.28% 0.1891 203.65);
+          --color-cyan: oklch(75.77% 0.1398 246);
+          --color-yellow: oklch(82.28% 0.1743 74.47);
+          --color-orange: oklch(66.49% 0.1891 50.12);
+          --color-green: oklch(82.28% 0.3075 142.24);
+        
     }
+
 }
+
+
 
 @supports selector(:has(+ *)) {
     aside {
@@ -144,6 +146,7 @@ details:nth-of-type(5){
       font-weight: bold;
       color: #000;
     }
+    /* inplaats van li h1, li h2, li h3, li h4 */
 }
 
 
