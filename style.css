@@ -130,13 +130,14 @@ details:nth-of-type(5){
       color: red;
       list-style: none;
     }
-    
+
     :is(li) a{
       color: green;
     }
 
     :where(h1, h2, h3, h4){
       font-weight: bold;
+      color: #000;
     }
 }
 
