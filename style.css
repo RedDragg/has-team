@@ -126,17 +126,19 @@ summary {
 }
 
 details:nth-of-type(5){
-  :where(p, ul, ol) {
-    color: red;
-  }
-  
-  :is(ul, ol, p){
-    color: blue;
-  }
+    :is(p, ul) {
+      color: red;
+      list-style: none;
+    }
 
-  p{
-    color:green;
-  }
+    :is(li) a{
+      color: green;
+    }
+
+    :where(h1, h2, h3, h4){
+      font-weight: bold;
+      color: #000;
+    }
 }
 
 
