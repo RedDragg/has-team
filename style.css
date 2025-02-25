@@ -131,7 +131,7 @@ details:nth-of-type(5){
       list-style: none;
     }
 
-    :is(li) a{
+    :is(li) :is(h1, h2, h3, h4, a){
       color: green;
     }
 
