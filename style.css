@@ -135,7 +135,7 @@ details:nth-of-type(5){
       color: green;
     }
 
-    :is(h1, h2, h3, h4){
+    :is(li) :is(h1, h2, h3, h4){
       font-weight: bold;
       color: #000;
     }
